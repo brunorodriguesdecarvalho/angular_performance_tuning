@@ -1,3 +1,16 @@
+#Notes - Results (lighthouse performance score / Time to Interactive)
+
+Conditions: Localhost, same computer, same time.
+
+1) Mobile (+75% / -67%) : 
+  -- Default: 45 / 12.8s 
+  -- Optimized: 79 / 4.2s
+
+2) Desktop: (+28% / -67%)
+  a) Default: 77 / 2.1s 
+  b) Optimized: 99 / 0.7s
+
+
 # SaasOptimized
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
