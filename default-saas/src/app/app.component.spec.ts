@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'saas-optimized'`, () => {
+  it(`should have as title 'default-saas'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('saas-optimized');
+    expect(app.title).toEqual('default-saas');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('saas-optimized app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('default-saas app is running!');
   });
 });

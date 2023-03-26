@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "saas-optimized": {
+    "default-saas": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/saas-optimized",
+            "outputPath": "dist/default-saas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -48,22 +48,15 @@
                   "maximumError": "4kb"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": true,
-              "buildOptimizer": true
+              "outputHashing": "all"
             },
             "development": {
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
+              "buildOptimizer": false,
+              "optimization": false,
               "vendorChunk": true,
-              "buildOptimizer": true
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"
@@ -72,18 +65,18 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "saas-optimized:build:production"
+              "browserTarget": "default-saas:build:production"
             },
             "development": {
-              "browserTarget": "saas-optimized:build:development"
+              "browserTarget": "default-saas:build:development"
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "saas-optimized:build"
+            "browserTarget": "default-saas:build"
           }
         },
         "test": {
